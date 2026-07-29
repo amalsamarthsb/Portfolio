@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --purple-50: #f5f3ff;
+  --purple-100: #ede9fe;
+  --purple-500: #7c3aed;
+  --purple-600: #6d28d9;
+  --page-hue-opacity: 0.08;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(800px 400px at 10% 10%, rgba(124,58,237,var(--page-hue-opacity)), transparent 20%),
+              radial-gradient(700px 350px at 90% 90%, rgba(109,40,217,var(--page-hue-opacity)), transparent 20%),
+              #08111f;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+img {
+  display: none !important;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(124,58,237,0.18);
+  color: white;
+}
+
+/* Subtle purple accents on interactive elements */
+a:hover, a:focus {
+  box-shadow: 0 10px 30px rgba(124,58,237,0.06);
+}
+
+.bg-sky-500:hover, .bg-purple-600:hover, button:hover {
+  box-shadow: 0 14px 40px rgba(124,58,237,0.08);
+}
+
+/* Gentle purple outline for focused controls */
+button:focus, a:focus {
+  outline: 2px solid rgba(124,58,237,0.12);
+  outline-offset: 3px;
+}
